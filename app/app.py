@@ -73,6 +73,9 @@ VALID_RANGES = {
     "petal_width": (0.1, 2.5)
 }
 
+# CRITICAL: Load model at module level (runs when Gunicorn imports the app)
+load_model()
+
 
 def validate_input(data):
     """Validate input data before prediction"""

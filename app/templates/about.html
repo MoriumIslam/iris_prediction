@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Iris Species Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Iris Predictor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/#predict" class="nav-link">Predict</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li class="theme-toggle">
+                    <button id="themeBtn" class="theme-btn" title="Toggle dark mode">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <section class="about-section">
+            <div class="section-header">
+                <h1>About This Project</h1>
+                <p>Learn about the machine learning model and dataset</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-card">
+                    <h2>🎯 Project Overview</h2>
+                    <p>
+                        The Iris Species Predictor is a machine learning web application that classifies iris flowers 
+                        into one of three species based on their physical measurements. This project demonstrates a 
+                        complete end-to-end machine learning pipeline from training to production deployment.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h2>📊 The Iris Dataset</h2>
+                    <p>
+                        The Iris dataset is one of the most famous datasets in machine learning and statistics. It was 
+                        collected by Ronald Fisher in 1936 and contains measurements of iris flowers from three different species:
+                    </p>
+                    <ul class="about-list">
+                        <li><strong>Iris Setosa:</strong> A small species with distinctive characteristics</li>
+                        <li><strong>Iris Versicolor:</strong> A medium-sized species with intermediate measurements</li>
+                        <li><strong>Iris Virginica:</strong> The largest species with longer petals</li>
+                    </ul>
+                    <p>
+                        Each sample includes four measurements (in centimeters): sepal length, sepal width, petal length, and petal width.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h2>🤖 Machine Learning Model</h2>
+                    <p>
+                        This application uses a pre-trained machine learning model to make predictions. The model was 
+                        trained on the complete Iris dataset using a supervised classification algorithm. It learns the 
+                        relationship between the flower measurements and their species.
+                    </p>
+                    <p>
+                        <strong>Model Accuracy:</strong> High accuracy on the test set ensures reliable predictions for 
+                        new iris flower measurements.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h2>🛠️ Technology Stack</h2>
+                    <ul class="about-list">
+                        <li><strong>Backend:</strong> Python with Flask web framework</li>
+                        <li><strong>Frontend:</strong> HTML5, CSS3, and Vanilla JavaScript</li>
+                        <li><strong>Model:</strong> Scikit-learn trained classifier (pickle format)</li>
+                        <li><strong>Deployment:</strong> Production-ready for cloud platforms like Render</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h2>🚀 How It Works</h2>
+                    <ol class="about-list">
+                        <li>You enter the measurements of an iris flower</li>
+                        <li>The app sends the data to the backend API</li>
+                        <li>The pre-trained model analyzes the measurements</li>
+                        <li>The model predicts the most likely iris species</li>
+                        <li>Results are displayed with confidence score and species information</li>
+                    </ol>
+                </div>
+
+                <div class="about-card">
+                    <h2>📚 Why Iris?</h2>
+                    <p>
+                        The Iris dataset has become a classic benchmark in machine learning for several reasons:
+                    </p>
+                    <ul class="about-list">
+                        <li>It's small enough to understand completely</li>
+                        <li>It's large enough to demonstrate real machine learning techniques</li>
+                        <li>It has clear, measurable features</li>
+                        <li>It's balanced across the three classes</li>
+                        <li>It's publicly available and well-documented</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h2>💡 Educational Value</h2>
+                    <p>
+                        This project is perfect for learning about:
+                    </p>
+                    <ul class="about-list">
+                        <li>Classification in machine learning</li>
+                        <li>Building APIs with Python and Flask</li>
+                        <li>Frontend-backend integration</li>
+                        <li>Model deployment and serving</li>
+                        <li>User interface design for ML applications</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h2>🔗 Data Source</h2>
+                    <p>
+                        Original Dataset: 
+                        <a href="https://archive.ics.uci.edu/ml/datasets/iris" target="_blank" class="about-link">
+                            UCI Machine Learning Repository
+                        </a>
+                    </p>
+                    <p>
+                        This dataset is in the public domain and has been widely used in machine learning research and education.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Iris Species Predictor. Powered by Machine Learning.</p>
+            <p class="footer-description">Built with Flask • Trained on Fisher's Iris Dataset</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
